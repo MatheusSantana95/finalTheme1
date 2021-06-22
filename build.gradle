@@ -38,6 +38,9 @@ test {
     useJUnitPlatform()
 }
 
+task wrapper(type: wrapper) {
+    gradleVersion = '2.0'
+}
 
 jar {
     archiveName("tema-1.jar")
