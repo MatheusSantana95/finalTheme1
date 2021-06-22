@@ -16,6 +16,7 @@ pipeline {
         
         stage ('Test') {
             steps{
+                sh 'gradle wrapper'
                 sh './gradlew test'
             }
         }
@@ -39,7 +40,7 @@ pipeline {
                     spec: '''{
                         "files": [
                             {
-                                "pattern": "build/libs/*.war",
+                                "pattern": "build/libs/*.jar",
                                 "target": "libs-gradle-dev-local/finalThemeApp/"
                             } 
                         ]
