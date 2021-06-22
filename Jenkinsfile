@@ -16,7 +16,7 @@ pipeline {
         
         stage ('Test') {
             steps{
-                sh 'gradle wrapper'
+                sh './gradle wrapper'
                 sh './gradlew test'
             }
         }
