@@ -29,7 +29,7 @@ pipeline {
         stage ('Artifactory Deploy') {
             steps {
                 rtServer (
-                    id: 'env.ARTIFACTORY_ID,
+                    id: env.ARTIFACTORY_ID,
                     url: env.ARTIFACTORY_URL,
                     username: env.ARTIFACTORY_CREDENTIALS_USR,
                     password: env.ARTIFACTORY_CREDENTIALS_PSW
@@ -39,7 +39,7 @@ pipeline {
                     spec: '''{
                         "files": [
                             {
-                                "pattern": "build/libs/*.jar",
+                                "pattern": "build/libs/*.war",
                                 "target": "libs-gradle-dev-local/finalThemeApp/"
                             } 
                         ]
