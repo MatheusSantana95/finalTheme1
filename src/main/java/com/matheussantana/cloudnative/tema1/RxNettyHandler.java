@@ -1,4 +1,4 @@
-package com.matheussantana.cloudnative.tema1.main;
+package com.matheussantana.cloudnative.tema1;
 
 import com.matheussantana.cloudnative.tema1.calculator.*;
 import com.matheussantana.cloudnative.tema1.config.AppConfig;

@@ -1,4 +1,4 @@
-package com.matheussantana.cloudnative.tema1.main;
+package com.matheussantana.cloudnative.tema1;
 
 import netflix.karyon.health.HealthCheckHandler;
 
