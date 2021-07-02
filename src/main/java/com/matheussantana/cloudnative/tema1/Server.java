@@ -12,7 +12,7 @@ public class Server {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         HealthCheckResource healthCheck = (HealthCheckResource) applicationContext.getBean("healthCheckResource");
 
-        RxNetty.createHttpServer(8080, new RxNettyHandler("/healthCheck",
+        RxNetty.createHttpServer(8083, new RxNettyHandler("/healthCheck",
                 new HealthCheckEndpoint(healthCheck),
                 (Calculator) applicationContext.getBean("calculator")))
                 .startAndWait();
