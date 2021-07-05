@@ -1,7 +1,7 @@
 package com.matheussantana.cloudnative.tema1.config;
 
 import com.matheussantana.cloudnative.tema1.calculator.*;
-import com.matheussantana.cloudnative.tema1.HealthCheckResource;
+import com.matheussantana.cloudnative.tema1.calculator.HealthCheckResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
