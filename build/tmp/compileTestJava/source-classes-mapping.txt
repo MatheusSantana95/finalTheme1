@@ -1,2 +1,0 @@
-com/matheussantana/cloudnative/tema1/calculator/CalculatorTest.java
- com.matheussantana.cloudnative.tema1.calculator.CalculatorTest
