@@ -1,0 +1,25 @@
+pipeline {
+   agent any
+   
+   environment {
+       DOCKERHUB_REPOSITORY = credentials('dockerhub-repository')
+   }
+
+   stages {
+      stage('Download Docker image') {
+         steps {
+            sh '''
+                 docker pull "$DOCKERHUB_REPOSITORY":calculator
+               '''
+         }
+      }
+
+      stage('Run Docker image') {
+         steps {
+            sh '''
+                 docker run -d -p 8083:8083 "$DOCKERHUB_REPOSITORY":calculator
+               '''
+         }
+      }
+   }
+}
